@@ -18,15 +18,7 @@ function solution(n) {
     let sum2 = 0;
     for(var i=0; i < half; i++) {
         sum1 += parseInt(str[i]);
-        
+        sum2 += parseInt(str[str.length-i-1]);   
     }
-    for(var j=half; j < str.length; j++) {
-        sum2 += parseInt(str[j]);
-    }
-    console.log(sum1, sum2)
-    if(sum1 === sum2) {
-        return true;
-    } else {
-        return false;
-    }
+    return sum1 == sum2;
 }
